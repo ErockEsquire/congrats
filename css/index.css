@@ -1,0 +1,806 @@
+/* Available fonts
+'Russo One', sans-serif;
+'Fugaz One', cursive;
+'Anton', sans-serif;
+'Bebas Neue', cursive;
+'Montserrat Subrayada', sans-serif; */
+@font-face {
+  font-family: "Fipps-Regular";
+  src: url("./fonts/Fipps-Regular.otf");
+  }
+
+@font-face {
+  font-family: "SSF4";
+  src: url("./fonts/SSF4.ttf");
+  }
+    
+:root {
+  font-size: 16px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./images/pixelbackground.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+
+header{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header-1 {
+  font-size: 2rem;
+  font-family: 'Russo One', sans-serif;
+  padding-top: 1rem;
+  text-shadow: 3px 3px white;
+  margin: 0;
+}
+
+.header-2 {
+  font-size: 3rem;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  position: absolute;
+  z-index: 10;
+  left: 38.5%;
+  top: 2rem;
+  margin: 0;
+  text-shadow: 3px 3px #A53860;
+}
+
+#navbar {
+  position: relative;
+  top: 2rem;
+  height: 4.6rem;
+}
+
+.navbar-ul:hover {
+  background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+  animation-name: changehue;
+  animation-iteration-count: infinite;
+  animation-duration: 1.5s;
+}
+
+@keyframes changehue {
+  to {
+    filter: hue-rotate(120deg);
+    transition: 1000ms linear;
+  }
+}
+
+.navbar-ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #61C9A8;
+  height: 4rem;
+  font-size: 2rem;
+  margin: 0;
+  top: 15vh;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-family: 'Fugaz One', cursive;
+  padding: 0 7rem;
+  align-items: center;
+}
+
+.navbar-ul2 {
+  display: flex;
+  justify-content: center;
+  background-color: maroon;
+  height: 1.5rem;
+  font-size: 1rem;
+  margin: 0;
+  top: 16vh;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  font-family: 'Fugaz One', cursive;
+}
+
+.navbar-ul li {
+  display: block;
+}
+
+.navbar-ul li svg {
+  width: 2rem;
+  position: relative;
+  top: 4px;
+  color: #4C3B4D;
+}
+
+.pets-tab-paw {
+  width: 2rem;
+  transform: rotate(20deg);
+  position: relative;
+  top: 4px;
+  color: #4C3B4D;
+}
+
+.create-tab {
+  position: relative;
+}
+
+.pets-tab:hover {
+  text-shadow: 2px 2px#A53860;
+  transition: 600ms;
+  cursor: pointer;
+}
+
+.create-tab:hover {
+  text-shadow: 2px 2px#A53860;
+  transition: 600ms;
+  cursor: pointer;
+}
+
+.battle-tab:hover {
+  text-shadow: 2px 2px#A53860;
+  transition: 600ms;
+  cursor: pointer;
+}
+
+.create-tab-dragon1 {
+  transform: scaleX(-1);
+}
+
+#main-container {
+  background-color: #FFEEDB;
+  background-size: cover;
+  width: 90%;
+  margin: auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  display: flex;
+  position: relative;
+  top: 24px;
+}
+
+#main-render {
+  height: 100%;
+  display: flex;
+}
+
+#welcome-page {
+  margin: 3rem;
+  height: 100vh;
+  text-align: center;
+}
+
+.welcome-header {
+  text-transform: uppercase;
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 2px 2px #A53860;
+}
+
+.rules {
+  text-transform: uppercase;
+  font-family: 'Fugaz One', cursive;
+}
+
+#headers {
+  cursor: pointer;
+}
+
+.pets-leftbar {
+  width: 18rem;
+  border-right: 1px solid black;
+}
+
+h2#pet-name {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: 'Fugaz One', cursive;
+}
+
+h4#playerHP {
+  margin-top: 0;
+}
+
+h4#opponentHP {
+  margin-top: 0;
+}
+
+.move-button {
+  height: 2rem;
+  font-family: "Fipps-Regular";
+  background: none;
+  outline: none;
+  border: none;
+  margin: auto;
+}
+
+.move-button:hover::before {
+  font-family: sans-serif;
+  content:"\25b6";
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.pet-button {
+  height: 2rem;
+  font-family: "Fipps-Regular";
+}
+
+.pets-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+}
+
+.pets-li {
+  width: 100%;
+  display: flex;
+  font-size: 1.5rem;
+  font-family: 'Fugaz One', cursive;
+  text-transform: uppercase;
+  padding: 1rem 0 1rem 0;
+  color: black;
+}
+
+.pets-name-text {
+  margin-left: 1rem;
+}
+
+.pets-li:hover {
+  background-color: rgb(228, 174, 112);
+  transition: 600ms;
+  cursor: pointer;
+  text-shadow: 2px 2px#A53860;
+}
+
+#pet-details {
+  margin: 1rem 3rem 3rem 3rem;
+  max-height: 100%;
+}
+
+#battle-btn {
+  display: none;
+}
+
+.pet-image {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+#pet-create {
+  margin: 1rem 1rem;
+}
+
+.create-pet-header {
+  font-family: 'Fugaz One', cursive;
+  text-transform: uppercase;
+}
+
+#pet-battle {
+  height: 40rem;
+  width: 60rem;
+  display: flex;
+}
+
+div#battle-div {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  height: 35rem;
+  width: 48rem;
+  background-size: cover;
+  padding: 0;
+  position: relative;
+  top: auto;
+  left: 7px;
+}
+
+#opponent-anim {
+  height: 35rem;
+  width: 48rem;
+  padding: 0;
+  top: auto;
+  left: 23rem;
+  position: absolute;
+}
+
+.start-fight {
+  height: 35rem;
+  width: 48rem;
+  padding: 0;
+  top: 9rem;
+  left: 33rem;
+  position: absolute;
+  background-image: url(./images/Fight.png);
+  background-repeat: no-repeat;
+}
+
+.lose {
+  height: 35rem;
+  width: 48rem;
+  padding: 0;
+  top: 0rem;
+  left: 23rem;
+  position: absolute;
+  background-image: url(./images/gameoverbit.png);
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  display: block;
+}
+
+.win {
+  height: 35rem;
+  width: 48rem;
+  padding: 0;
+  top: 0rem;
+  left: 26rem;
+  position: absolute;
+  background-image: url(./images/victory.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+}
+
+div#opponent-div {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  margin: 0;
+}
+
+img#opponent {
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
+  border-radius: 25%;
+}
+
+div#player-pet-div {
+  position: absolute;
+  left: 2rem;
+  bottom: -4rem;
+  margin: 0;
+}
+
+div#button-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+  background-color: #FFEEDB;
+  width: 25rem;
+  height: 5rem;
+  border-style: double;
+  border-color: black;
+  border-width: 5px;
+}
+
+div#text-box{
+  background-color: #FFEEDB;
+  width: 22rem;
+  height: 5.5rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  border-style: double;
+  border-color: black;
+  border-width: 5px;
+  font-family: "Fipps-Regular";
+  font-size: 12px;
+}
+
+span.damage{
+  color: red;
+}
+
+img#player{
+  border-radius: 25%;
+}
+
+h2#pet-name {
+  margin-bottom: 0;
+  text-shadow: 1px 1px white;
+}
+
+h4#playerHP {
+  margin-top: 0;
+  text-shadow: 1px 1px white;
+}
+
+h4#opponentHP {
+  margin-top: 0;
+  text-shadow: 1px 1px white;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.assign-stats {
+  width: 10rem;
+}
+
+.personality-stats {
+  margin-left: 1rem;
+  padding-top: 1px;
+  width: 11rem;
+}
+
+.move-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.move-li {
+  width: 100%;
+}
+
+.move-effect {
+  padding-left: 0;
+  list-style: none;
+}
+
+.move-container {
+  display: flex;
+}
+
+.select-move {
+  font-size: 18.72px;
+}
+
+.create-button {
+  height: 3rem;
+  width: 10rem;
+  background-color: #61C9A8;
+  color: white;
+  font-size: 2rem;
+  font-family: 'Fugaz One', cursive;
+  bottom: 10rem;
+  cursor: pointer;
+  border: 1px solid black;
+  border-bottom: 5px solid teal;
+  border-right: 5px solid teal;
+  box-shadow: 2px 4px black;
+  text-shadow: 1px 1px black;
+  border-radius: 18px;
+}
+
+.create-button:focus {
+  background-color: #61C9A8;
+  border-top: 5px solid teal;
+  border-left: 5px solid teal;
+  border-bottom: 5px solid #61C9A8;
+  border-right: 5px solid #61C9A8;
+  box-shadow: 1px 2px black;
+  color: white;
+  outline: 0;
+}
+
+.selected-pet {
+  position: absolute;
+  right: 0;
+  width: 25rem;
+  display: none;
+  margin: 0 3rem 3rem 3rem;
+}
+
+footer {
+  font-size: 2rem;
+  font-family: 'Bebas Neue', cursive;
+  bottom: -24px;
+  width: 100%;
+  border-top: 1px solid black;
+  background-image: url("./images/pixelbackground.jpg");
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  text-align: center;
+}
+
+#audio-player {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 5px;
+  top: 0;
+}
+
+#audio-player button {
+  width: 70px;
+}
+
+#oppkapow1 {
+    width: 9rem;
+    height: 12rem;
+    left: 29rem;
+    position: absolute;
+    top: 76px;
+    text-shadow: 3px 3px#61C9A8;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    display: none;
+    background-image: url(./images/effects/kapow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+    transform: rotate(15deg);
+}
+
+ #oppkapow2 {
+  width: 9rem;
+  height: 12rem;
+  left: 40rem;
+  position: absolute;
+  top: 23px;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/explosion.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transform: rotate(15deg);
+}
+
+#oppkapow3 {
+  width: 9rem;
+  height: 12rem;
+  left: 32rem;
+  position: absolute;
+  top: 0rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/pow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transform: rotate(15deg);
+}
+
+#oppkapow4 {
+  width: 15rem;
+  height: 12rem;
+  left: 25rem;
+  position: absolute;
+  top: 3rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/ragnarok.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+
+#oppkapow5 {
+  width: 9rem;
+  height: 12rem;
+  left: 34rem;
+  position: absolute;
+  top: 4rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/thor.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transform: rotate(20deg);
+}
+
+#oppkapow6 {
+  width: 15rem;
+  height: 12rem;
+  left: 32rem;
+  position: absolute;
+  top: 3rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/ken.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#oppkapow7 {
+  width: 22rem;
+  height: 14rem;
+  left: 26rem;
+  position: absolute;
+  top: 0rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/akuma.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#oppkapow8 {
+  width: 15rem;
+  height: 12rem;
+  left: 31rem;
+  position: absolute;
+  top: 1rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/wind.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#playerkapow1 {
+  width: 9rem;
+    height: 12rem;
+    left: 12rem;
+    position: absolute;
+    top: 16rem;
+    text-shadow: 3px 3px#61C9A8;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    display: none;
+    background-image: url(./images/effects/pow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 100;
+    transform: rotate(15deg);
+}
+
+#playerkapow2 {
+  width: 9rem;
+  height: 12rem;
+  left: 6rem;
+  position: absolute;
+  top: 10rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/kapow.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transform: rotate(-16deg);
+}
+
+#playerkapow3 {
+  width: 22rem;
+  height: 12rem;
+  left: 1rem;
+  position: absolute;
+  top: 14rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/ragnarok.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#playerkapow4 {
+  width: 9rem;
+  height: 12rem;
+  left: 6rem;
+  position: absolute;
+  top: 12rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/thor.gif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transform: rotate(-26deg);
+}
+
+#playerkapow5 {
+  width: 22rem;
+  height: 18rem;
+  left: 3rem;
+  position: absolute;
+  top: 7rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/wind.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transform: rotate(-3deg);
+}
+
+#playerkapow6 {
+  width: 12rem;
+  height: 12rem;
+  left: 4rem;
+  position: absolute;
+  top: 13rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/ken.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+#playerkapow7 {
+  width: 9rem;
+  height: 12rem;
+  left: 9rem;
+  position: absolute;
+  top: 13rem;
+  text-shadow: 3px 3px#61C9A8;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  display: none;
+  background-image: url(./images/effects/explosion.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 100;
+  transform: rotate(-16deg);
+}
+
+
+.fade {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+  top: 0;
+  background: linear-gradient(90deg, #00B4D8 0%, rgb(226, 233, 235) 100%);
+  z-index: 1;
+}
+
+.credit-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+  color: white;
+  text-shadow: 6px 6px rgb(25, 33, 56);
+  font-size: 400%;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+  font-family: 'Bebas Neue';
+  text-transform: uppercase;
+}
+
+.crawl {
+  position: relative;
+  top: 12000px;
+  transform-origin: 50% 100%;
+  animation: crawl 30s linear;
+}
+
+.crawl > .credits {
+  font-size: 90%;
+  text-align: center;
+}
+
+.crawl > .credits h1 {
+  margin: 0 0 100px;
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+    0% {
+    top: -100px;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+    100% { 
+    top: -7000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
