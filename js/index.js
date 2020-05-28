@@ -14,7 +14,7 @@ function credits() {
     mainRender.innerHTML = ""
 
     congrats.play()
-    
+
     let div = document.createElement('div')
     div.setAttribute('class', 'fade')
 
@@ -46,6 +46,7 @@ function credits() {
     <h2 id="welcome-header"><strong>Ariel David</strong></h2>
     <h2 id="welcome-header"><strong>Chris Leja</strong></h2>
     <h2 id="welcome-header"><strong>Firuz Afzalov</strong></h2>
+    <h2 id="welcome-header"><strong>Isaac Avilez</strong></h2>
     <h2 id="welcome-header"><strong>Ken Ho</strong></h2>
     <h2 id="welcome-header"><strong>Stanley Lee</strong></h2>
     <h2 id="welcome-header"><strong>Abid Talukdar</strong></h2>
